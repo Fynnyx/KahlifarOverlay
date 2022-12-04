@@ -1,4 +1,9 @@
 @import "./colors.scss";
+@import "./config.scss";
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
 
 body {
     width: 100vw;
@@ -11,14 +16,15 @@ body {
     display: flex;
     flex-direction: row;
     width: 100vw;
+    height: $bar-height;
     &__bar {
-        // position: relative;
         display: flex;
+        position: relative;
         justify-content: center;
         width: 100%;
-        height: 2rem;
-        & > div > div {
-            // position: absolute;
+        background-color: $kahlifar-orange;
+        & > div{
+            position: absolute;
             display: flex;
             width: 100%;
             height: 100%;
@@ -26,12 +32,35 @@ body {
     }
     &__logo-box {
         display: flex;
+        margin-left: auto;
         justify-content: center;
-        align-items: center;
-        width: 6rem;
+        width: $sidebar_width ;
+        min-width: $sidebar_width;
         background-color: $kahlifar-blue;
         & > img {
-            height: 1.5rem;
+            max-height: 100%;
+            padding: 10px 10px;
+        }
+    }
+}
+
+.sidebar {
+    display: flex;
+    width: $sidebar_width;
+    height: calc(100% - $bar-height);
+    background-color: $kahlifar-blue;
+    background: linear-gradient(245deg, $kahlifar-blue, lighten($kahlifar-blue, 5.5%));
+    margin-left: auto;
+    &__game {
+        &__text {
+            height: max-content;
+            margin-top: 1rem;
+            letter-spacing: 10px;
+            font-size: 100px;
+            text-transform: uppercase;
+            writing-mode: vertical-lr;
+            color: white;
+            font-weight: bold;
         }
     }
 }
