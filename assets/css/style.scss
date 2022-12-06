@@ -50,6 +50,10 @@ body {
                 &::after {
                     content: ":";
                 }
+                // Not the first element
+                &:not(:first-child) {
+                    margin-left: 150px;
+                }
             }
         }
     }
