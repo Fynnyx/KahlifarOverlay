@@ -32,6 +32,8 @@ const socials = [
 const urlString = window.location.search;
 const urlParams = new URLSearchParams(urlString);
 
+
+// FUNCTIONS
 async function switchSocials() {
     while (true) {
         for (i of socials) {
